@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "lint": "eslint ./src",
     "test": "vitest run",
     "test:dev": "vitest",
+    "coverage": "vitest run --coverage",
     "cypress:open": "npx cypress open --e2e --browser electron",
     "cypress": "npx cypress run --e2e",
     "build": "tsc && vite build",

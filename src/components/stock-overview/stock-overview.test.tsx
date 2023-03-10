@@ -1,6 +1,5 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { StockRow } from "./stock-row";
 import { StockOverview } from "./stock-overview";
 import { StockType } from "../stocks";
 

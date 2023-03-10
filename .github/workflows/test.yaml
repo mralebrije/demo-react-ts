@@ -1,0 +1,65 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [main, develop]
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+  workflow_call:
+
+jobs:
+  test:
+    name: Test with coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: ☁️ checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🔧 setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: 📦 install dependencies
+        run: npm ci
+
+      - name: 🔍 run tests
+        run: npm run coverage
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: ☁️ checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🔧 setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: 📦 install dependencies
+        run: npm ci
+
+      - name: 🔍 lint code
+        run: npm run lint
+
+  cypress-run:
+    name: Cypress e2e tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: ☁️ checkout repository
+        uses: actions/checkout@v3
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          build: npm run build
+          start: npm run preview
+          config: baseUrl=http://localhost:4173/vite-ts-react/
