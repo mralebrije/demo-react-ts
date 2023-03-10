@@ -1,0 +1,14 @@
+#root {
+  height: 60px;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.tech-items-container {
+  display: flex;
+  flex-direction: row;
+}

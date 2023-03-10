@@ -1,0 +1,14 @@
+#root {
+  width: 100%;
+}
+
+.card-title {
+  display: flex;
+  flex-display: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title-icon {
+  margin-top: -2px;
+}
