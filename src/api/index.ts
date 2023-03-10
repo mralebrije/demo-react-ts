@@ -12,7 +12,6 @@ export interface StockItem {
   "9. matchScore": string;
 }
 
-
 export interface SearchResponse {
   bestMatches: StockItem[];
 }

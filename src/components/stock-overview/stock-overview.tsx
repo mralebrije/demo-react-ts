@@ -23,7 +23,6 @@ export const StockOverview: FC<StockOverviewProps> = ({
   const { overview } = useGetOverview(stock, isMockMode);
   const { quote } = useGetQuote(stock, isMockMode);
 
-
   useEffect(() => {
     if (!stock.quote && quote) {
       const newStocks = selectedStocks.map((selectedStock) => {

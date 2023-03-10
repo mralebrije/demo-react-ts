@@ -1,4 +1,11 @@
-import { AppBar, Link, ToggleButton, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Link,
+  ToggleButton,
+  Toolbar,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import "./header.scss";
 import { FC } from "react";
 import { techItems } from ".";
@@ -37,28 +44,40 @@ export const Header: FC<HeaderProps> = ({
           </Link>
         </div>
 
-        <ToggleButton
-          color="primary"
-          value="check"
-          selected={isMockMode}
-          onChange={() => {
-            setIsMockMode(!isMockMode);
-          }}
+        <Tooltip
+          title={
+            "When MOCK API mode is enabled, the data results are pulled from a local source."
+          }
         >
-           Mock API Mode
-        </ToggleButton>
+          <ToggleButton
+            color="primary"
+            value="check"
+            selected={isMockMode}
+            onChange={() => {
+              setIsMockMode(!isMockMode);
+            }}
+          >
+            Mock API Mode
+          </ToggleButton>
+        </Tooltip>
 
-        <ToggleButton
-          color="primary"
-          value="check"
-          selected={isDarkMode}
-          onChange={() => {
-            setIsDarkMode(!isDarkMode);
-          }}
-          sx={{ ml: 2 }}
+        <Tooltip
+          title={
+            "When DARK mode is enabled, the UI colors of view components are adjusted."
+          }
         >
-           Dark Mode
-        </ToggleButton>
+          <ToggleButton
+            color="primary"
+            value="check"
+            selected={isDarkMode}
+            onChange={() => {
+              setIsDarkMode(!isDarkMode);
+            }}
+            sx={{ ml: 2 }}
+          >
+            Dark Mode
+          </ToggleButton>
+        </Tooltip>
 
         <Typography variant="subtitle1" sx={{ ml: 4 }}>
           <strong>Techs:</strong>

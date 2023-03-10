@@ -1,16 +1,16 @@
 # Summary
 
-Sergio Durán demo project.
+This is a "Stock Comparing" app exercise created by [Sergio Durán](https://www.linkedin.com/in/xduranmtz/) for demo purposes.
 
-https://www.linkedin.com/in/xduranmtz/
+**Light mode**
 
-## Run
+![](public/stock-comparison-ss-1.png)
 
-`npm i && npm run dev`
 
-## Format
+**Dark mode**
 
-- Prettier
+![](public/stock-comparison-ss-2.png)
+
 
 ## Techs
 
@@ -18,8 +18,18 @@ https://www.linkedin.com/in/xduranmtz/
 - React
 - Typescript
 - Material UI
-- Emotion
 - SCSS
+
+## Run
+
+`npm i && npm run dev`
+
+- node >= 16
+- npm >= 8
+
+## Format
+
+- Prettier
 
 ## Features
 
@@ -27,6 +37,10 @@ https://www.linkedin.com/in/xduranmtz/
 - Stock comparison
 - API Mock mode
 
+## To Know
+
+- Alpha Vantage API has a limited free version, so, consider this limitation when performing actions like selecting several items quickly.
+- Not all stocks have overview details, e.g. the ones with a period in the symbol. 
 
 ## TODOs
 
@@ -38,3 +52,4 @@ https://www.linkedin.com/in/xduranmtz/
 - deep links - url params
 - CI
 - Deployment
+- refactor stocks hooks with context provider

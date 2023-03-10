@@ -7,6 +7,8 @@ import {
 import { getMockResults } from "./get-mock-results";
 
 const BASE_URL = "https://www.alphavantage.co/query?function=";
+
+// To create an API key for testing purposes, go to https://www.alphavantage.co/support/#api-key
 const API_KEY = "WWN7ZNVB6L4ZBG1H";
 
 export const apiFetch = async <

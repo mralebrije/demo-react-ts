@@ -4,7 +4,7 @@ import { Dashboard } from "./components/dashboard/dashboard";
 import React, { useState } from "react";
 import { StockType } from "./components/stocks";
 import { theme } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, Link, ThemeProvider, Typography } from "@mui/material";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,6 +25,16 @@ function App() {
         selectedStocks={selectedStocks}
         setSelectedStocks={setSelectedStocks}
       />
+      <Typography variant="body1" className="footer" sx={{ mt: 1 }}>
+        Source:
+        <Link
+          target="_blank"
+          href="https://www.alphavantage.co/documentation/"
+          sx={{ ml: 1 }}
+        >
+          Alpha Vantage API
+        </Link>
+      </Typography>
     </ThemeProvider>
   );
 }
