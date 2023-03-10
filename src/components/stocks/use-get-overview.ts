@@ -38,7 +38,7 @@ export function useGetOverview(stock: StockType, mockMode: boolean) {
     return () => {
       controller.abort();
     };
-  }, [stockSymbol, mockMode]);
+  }, [stockSymbol, overview, mockMode]);
 
   return { overview, isLoading, error };
 }

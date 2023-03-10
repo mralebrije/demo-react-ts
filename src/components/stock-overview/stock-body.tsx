@@ -1,7 +1,7 @@
 import { CardContent, Grid, Typography } from "@mui/material";
 import { StockType } from "../stocks";
 import { FC, useCallback } from "react";
-import { ArrowDownward, ArrowUpward, InfoRounded } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import "./stock-header.scss";
 import { StockRow } from "./stock-row";
 
@@ -27,9 +27,9 @@ export const StockBody: FC<StockBodyProps> = ({ stock }) => {
   let changeArrow = <></>;
   if (stock.quote?.change_percent) {
     changeArrow = priceIncreased ? (
-      <ArrowUpward color="success" />
+      <ArrowUpward data-testid="change-arrow-up" color="success" />
     ) : (
-      <ArrowDownward color="error" />
+      <ArrowDownward data-testid="change-arrow-down" color="error" />
     );
   }
 

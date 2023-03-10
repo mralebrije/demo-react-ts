@@ -36,7 +36,7 @@ export function useGetQuote(stock: StockType, mockMode: boolean) {
     return () => {
       controller.abort();
     };
-  }, [stockSymbol, mockMode]);
+  }, [stockSymbol, quote, mockMode]);
 
   return { quote, isLoading, error };
 }

@@ -19,6 +19,8 @@ This is a "Stock Comparing" app exercise created by [Sergio Durán](https://www.
 - Typescript
 - Material UI
 - SCSS
+- Jest
+- Cypress
 
 ## Run
 
@@ -26,6 +28,18 @@ This is a "Stock Comparing" app exercise created by [Sergio Durán](https://www.
 
 - node >= 16
 - npm >= 8
+
+## Run Unit & Integration tests
+
+`npm i && npm run test`
+
+## Run E2E tests
+
+`npm i && npm run cypress`
+
+or
+
+`npm i && npm run cypress:open`
 
 ## Format
 
@@ -44,12 +58,15 @@ This is a "Stock Comparing" app exercise created by [Sergio Durán](https://www.
 
 ## TODOs
 
-- unit tests
-- integration tests
-- e2e tests
-- i18n
-- a11n
+- i18n/l10n
+- a11y (aria, htmlFor)
 - deep links - url params
 - CI
 - Deployment
 - refactor stocks hooks with context provider
+
+## TODOs
+
+- extend unit tests coverage
+- extend integration tests coverage
+- extend e2e tests

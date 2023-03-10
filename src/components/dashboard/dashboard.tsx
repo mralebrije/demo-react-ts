@@ -43,7 +43,7 @@ export const Dashboard: FC<DashboardProps> = ({
       maxWidth={false}
       sx={{ mx: 0, my: 0, px: 20, py: 0 }}
     >
-      <Alert severity="info" sx={{ my: 3 }}>
+      <Alert data-testid="dashboard-info-banner" severity="info" sx={{ my: 3 }}>
         Search and compare up to 3 companies by symbol or full name.
       </Alert>
 

@@ -15,12 +15,13 @@ export const StockHeader: FC<StockHeaderProps> = ({
     <CardHeader
       title={
         <span className="card-title">
-          <Typography>
+          <Typography data-testid="stock-header-symbol">
             <strong>{symbol}</strong>
           </Typography>
 
           <Tooltip title={overview?.description}>
             <InfoRounded
+              data-testid="stock-header-icon"
               color="info"
               fontSize="small"
               className="card-title-icon"

@@ -50,6 +50,7 @@ export const Header: FC<HeaderProps> = ({
           }
         >
           <ToggleButton
+            data-testid="header-btn-mock"
             color="primary"
             value="check"
             selected={isMockMode}
@@ -67,6 +68,7 @@ export const Header: FC<HeaderProps> = ({
           }
         >
           <ToggleButton
+            data-testid="header-btn-theme"
             color="primary"
             value="check"
             selected={isDarkMode}

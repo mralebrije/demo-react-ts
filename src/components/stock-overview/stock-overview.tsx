@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { Card} from "@mui/material";
 import "./stock-overview.scss";
 import { FC, useEffect } from "react";
 import { StockType } from "../stocks";
@@ -46,7 +46,7 @@ export const StockOverview: FC<StockOverviewProps> = ({
 
       setSelectedStocks(newStocks);
     }
-  }, [setSelectedStocks, overview, quote, stock]);
+  }, [setSelectedStocks, selectedStocks, overview, quote, stock]);
 
   return (
     <Card component="article" aria-label={stock.symbol}>

@@ -16,6 +16,7 @@ export function StockRow({ label, value, ...rest }: StockRowProps) {
   return (
     <>
       <Grid
+        data-testid="stock-row-label"
         item
         xs={6}
         container
@@ -25,7 +26,7 @@ export function StockRow({ label, value, ...rest }: StockRowProps) {
       >
         {label}
       </Grid>
-      <Grid item xs={6} {...rest}>
+      <Grid data-testid="stock-row-value" item xs={6} {...rest}>
         {value}
       </Grid>
     </>

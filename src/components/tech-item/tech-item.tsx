@@ -13,6 +13,7 @@ export const TechItem: FC<TechItemProps> = ({ name, src, href, alt }) => {
   return (
     <span className="tech-item-container">
       <Link
+        data-testid="item-link"
         target="_blank"
         variant="button"
         color="text.primary"
